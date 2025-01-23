@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Список распознанных изображений</h2>
+<ul>
+    {% for item in results %}
+    <li>
+        <a href="/details/{{ item.id }}">{{ item.filename }}</a>
+        — {{ item.recognized_text[:40] }}...
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

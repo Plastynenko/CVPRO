@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Детали OCR</h2>
+<p><strong>ID:</strong> {{ result.id }}</p>
+<p><strong>Файл:</strong> {{ result.filename }}</p>
+<p><strong>Дата:</strong> {{ result.created_at }}</p>
+<hr/>
+<h3>Распознанный текст:</h3>
+<pre>{{ result.recognized_text }}</pre>
+{% endblock %}
